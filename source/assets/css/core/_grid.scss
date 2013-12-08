@@ -45,18 +45,18 @@ $gutter-width	: $default-gutter-width/2;
 	padding-right: gutter();
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through $default-column-number {
 
 	.col-xs-#{$i} {
 		@extend %float-xs;
 
 		@include respond(phone) {
-			width: ($i/12)*100%;
+			width: ($i/$default-column-number)*100%;
 		}
 	}
 	.offset-xs-#{$i} {
 		@include respond(phone) {
-			margin-left: ($i/12)*100%;
+			margin-left: ($i/$default-column-number)*100%;
 		}
 	}
 
@@ -64,12 +64,12 @@ $gutter-width	: $default-gutter-width/2;
 		@extend %float-sm;
 		
 		@include respond(phablet) {
-			width: ($i/12)*100%;
+			width: ($i/$default-column-number)*100%;
 		}
 	}
 	.offset-sm-#{$i} {
 		@include respond(phablet) {
-			margin-left: ($i/12)*100%;
+			margin-left: ($i/$default-column-number)*100%;
 		}
 	}
 	
@@ -77,12 +77,12 @@ $gutter-width	: $default-gutter-width/2;
 		@extend %float-md;
 		
 		@include respond(tablet) {
-			width: ($i/12)*100%;
+			width: ($i/$default-column-number)*100%;
 		}
 	}
 	.offset-md-#{$i} {
 		@include respond(tablet) {
-			margin-left: ($i/12)*100%;
+			margin-left: ($i/$default-column-number)*100%;
 		}
 	}
 
@@ -90,12 +90,12 @@ $gutter-width	: $default-gutter-width/2;
 		@extend %float-lg;
 
 		@include respond(standard) {
-			width: ($i/12)*100%;
+			width: ($i/$default-column-number)*100%;
 		}
 	}
 	.offset-lg-#{$i} {
 		@include respond(standard) {
-			margin-left: ($i/12)*100%;
+			margin-left: ($i/$default-column-number)*100%;
 		}
 	}
 }

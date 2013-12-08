@@ -30,7 +30,7 @@
 	> li {
 		display: inline-block;
 		margin-left: -3px;
-		margin-right: 5px;
+		margin-right: 15px;
 
 		&:first-child {
 			margin-left: 0
@@ -102,12 +102,12 @@
 
 	background: $w;
 	border: 1px solid $def-border;
-	padding: 9px;
+	padding: 19px;
 
 	&:hover {
-		-webkit-box-shadow: 0 2px 15px rgba($b, .4);
-		-moz-box-shadow: 0 2px 15px rgba($b, .4);
-		box-shadow: 0 2px 15px rgba($b, .4);
+		-webkit-box-shadow: 0 2px 15px rgba($b, .2);
+		-moz-box-shadow: 0 2px 15px rgba($b, .2);
+		box-shadow: 0 2px 15px rgba($b, .2);
 	}
 }
 

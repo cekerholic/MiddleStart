@@ -11,11 +11,19 @@ p {
 a {
 	@include link();
 	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 small,
 .small {
 	font-size: 85%;
+}
+
+abbr[title] {
+	cursor: help;
 }
 
 
@@ -117,7 +125,7 @@ dl {
 
 dt,
 dd {
-	@include adjust-leading-to(1, 14px);
+	line-height: $base-line-height
 }
 
 dt {
@@ -182,8 +190,8 @@ samp {
 code {
 	padding: 2px 4px;
 	font-size: 90%;
-	color: $grey;
-	background-color: $grey-lighter;
+	color: shade($link, 30%);
+	background-color: tint($link, 90%);
 	white-space: nowrap;
 	border-radius: 3px;
 	line-height: $base-line-height - 1;

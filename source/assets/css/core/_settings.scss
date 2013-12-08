@@ -43,7 +43,7 @@ $leading-h3:            1.5 !default;
 $font-size-h4:          18px !default;
 $leading-h4:            1 !default;
 $font-size-h5:          $base-font-size !default;
-$leading-h5:            2 !default;
+$leading-h5:            1 !default;
 $font-size-h6:          ceil($base-font-size * 0.85) !default;
 $leading-h6:            1 !default;
 
@@ -73,7 +73,8 @@ $def-border:            #ddd;
 // Grid
 // --------------------------------------------
 // default grid gutter
-$default-gutter-width:  30px !default;
+$default-column-number:    12 !default;
+$default-gutter-width:     30px !default;
 
 
 

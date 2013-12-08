@@ -16,8 +16,8 @@ legend {
 	width: 100%;
 	padding: 0;
 	margin-bottom: $base-line-height - 1;
-	font-size: ($base-font-size * 1.25);
-	line-height: inherit;
+	font-size: ceil($base-font-size * 1.5);
+	line-height: ceil($base-line-height * 1.5);
 	color: $text;
 	border: 0;
 	border-bottom: 1px solid $def-border;

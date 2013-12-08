@@ -4,7 +4,7 @@
 // Base icon Class Definition
 .icon 				{ @extend %fa }
 
-// Calling individual icon
+// Sample: Calling individual icon
 .icon-facebook 		{ @extend %fa-facebook }
 .icon-twitter 		{ @extend %fa-twitter }
 .icon-linkedin 		{ @extend %fa-linkedin }
@@ -13,9 +13,16 @@
 .icon-dribbble		{ @extend %fa-dribbble }
 .icon-comment		{ @extend %fa-comment }
 
-// Icon styling
+// Sample: Icon styling
 $icon-color: $silver;
 
+.icon {
+	color: $icon-color;
+	vertical-align: middle;
+}
+.icon-2x { @extend %fa-2x }
+
+// Sample: icons with border around them
 %icon-styled {
 	width: 30px;
 	height: 30px;
@@ -31,6 +38,7 @@ $icon-color: $silver;
 	}
 }
 
+// Sample: icon with various shape 
 .icon-circle {
 	@extend %circle;
 	@extend %icon-styled;
