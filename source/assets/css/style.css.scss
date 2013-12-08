@@ -13,16 +13,13 @@
 
 // Core Compass
 @import "compass";
-@import "compass/css3";
-@import "compass/typography";
-@import "compass/utilities";
+@import "scut";
 
 // Core Framework
 @import "core/settings";
 @import "core/font-awesome";
 @import "core/fonts";
 @import "core/mixins";
-@import "core/scut/dist/scut"; // Scut SASS Utilities http://davidtheclark.github.io/scut/
 @import "core/reset";
 @import "core/placeholder";
 @import "core/scaffolding";

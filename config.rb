@@ -12,6 +12,7 @@ page "sitemap.html", :layout => false
 
 # Gather every @media-queries rule into one block
 require 'sass-media_query_combiner'
+require 'scut'
 
 # Compass config
 compass_config do |compass|
