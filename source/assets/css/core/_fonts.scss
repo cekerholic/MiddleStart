@@ -1,0 +1,16 @@
+@mixin font-face($family, $path, $weight: normal, $style: normal ) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$font-path}/#{$path}.eot');
+		src: 
+			url('#{$font-path}/#{$path}.eot') format('embedded-opentype'),
+			url('#{$font-path}/#{$path}.woff') format('woff'),
+			url('#{$font-path}/#{$path}.ttf') format('truetype'),
+			url('#{$font-path}/#{$path}.svg') format('svg');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+// Example usage
+// @include font-face('Proxima Nova', 'proximanova-reg'); // Regular

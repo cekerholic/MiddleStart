@@ -1,0 +1,118 @@
+---
+title: Home
+---
+
+
+/ Sample Files
+.container{:style => "margin-top: 40px"} 
+	.row 
+		.col-md-6
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad rerum incidunt ipsa neque natus quo minus a eligendi nisi vel?
+			%h1 First Heading
+			%h2 Second Heading
+			%h3 Third Heading
+			%h4 Fourth Heading
+			%h5 Fifth Heading
+			%h6 Sixth Heading
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad rerum incidunt ipsa neque natus quo minus a eligendi nisi vel?
+			%ul.list-inline 
+				%li.icon-circle
+					%a.icon.icon-facebook{:href => "#"} 
+				%li.icon-circle
+					%a.icon.icon-twitter{:href => "#"} 
+				%li.icon-square
+					%a.icon.icon-dribbble{:href => "#"} 
+				%li.icon-square
+					%a.icon.icon-linkedin{:href => "#"} 
+				%li.icon-rounded
+					%a.icon.icon-gplus{:href => "#"} 
+				%li.icon-rounded
+					%a.icon.icon-comment{:href => "#"} 
+			%p
+				Lorem ipsum 
+				%a{:href => "#"} dolor sit amet,
+				consectetur adipisicing elit. Pariatur, nemo tempore eum officiis 
+				%code some code
+				possimus amet nisi excepturi quos vitae optio.
+			%ol 
+				%li= lorem.words 7
+				%li= lorem.words 7
+				%li= lorem.words 7
+				%ul.list-unstyled
+					%li= lorem.words 7
+					%li= lorem.words 7
+					%li= lorem.words 7
+			%ul.list-inline
+				%li THIS
+				%li IS
+				%li INLINE
+				%li LIST
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quo expedita provident officia autem maiores praesentium animi aliquid illo cupiditate.
+			%pre
+				:escaped
+					<ol>
+					  <li>sunt molestiae dolor</li>
+					  <li>vitae ipsam dolor sint</li>
+					</ol>
+
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quo expedita provident officia autem maiores praesentium animi aliquid illo cupiditate.
+			%blockquote
+				%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, qui recusandae tenetur saepe libero perferendis maxime eos earum distinctio voluptatum. Enim, vero soluta possimus reprehenderit corporis necessitatibus quo exercitationem delectus!
+				%small John Doku
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, provident, nesciunt magnam maiores facilis voluptatum laborum maxime accusantium omnis ad.
+			%dl 
+				%dt Definition Title
+				%dd Definition Description
+				%dt Definition Title
+				%dd Definition Description
+				%dt Definition Title
+				%dd Definition Description
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aspernatur tempore excepturi amet laudantium a deleniti molestiae pariatur aut cum.
+			%dl.dl-horizontal
+				%dt Definition Title
+				%dd Definition Description
+				%dt Definition Title
+				%dd Definition Description
+				%dt Definition Title
+				%dd Definition Description
+		.col-md-6
+			%form{role: "form", style: "margin-bottom: 20px"}
+				%legend Form Title
+				%p 
+					%label{for: "exampleInputEmail1"} Email address
+					%input#exampleInputEmail1{placeholder: "Enter email", type: "email"}/
+				%p 
+					%label{for: "exampleInputPassword1"} Password
+					%input#exampleInputPassword1.form-control{placeholder: "Password", type: "password"}/
+				%p 
+					%label{for: "exampleInputFile"} File input
+					%input#exampleInputFile{type: "file"}/
+				.checkbox
+					%label
+						%input{type: "checkbox"}/
+						Check me out
+				%button.block{type: "submit"} Submit
+			%table.table
+				%thead
+					%tr
+						%th #
+						%th First Name
+						%th Last Name
+						%th Username
+				%tbody
+					%tr
+						%td 1
+						%td Mark
+						%td Otto
+						%td @mdo
+					%tr
+						%td 2
+						%td Jacob
+						%td Thornton
+						%td @fat
+					%tr
+						%td 3
+						%td Larry
+						%td the Bird
+						%td @twitter
+

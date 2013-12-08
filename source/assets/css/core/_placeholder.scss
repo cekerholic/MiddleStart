@@ -1,0 +1,145 @@
+// SCAFFOLDING
+// --------------------------------------------
+
+// Clearfix
+%clearfix {
+	&:before {
+		content: "";
+		display: table;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+
+// TYPOGRAPHY
+// --------------------------------------------
+
+// Remove list-style and left padding
+%list-unstyled {
+	@include reset-list;
+}
+
+%list-inline {
+	@extend %list-unstyled;
+
+	> li {
+		display: inline-block;
+		margin-left: -3px;
+		margin-right: 5px;
+
+		&:first-child {
+			margin-left: 0
+		}
+	}
+}
+
+
+
+// GRID SYSTEM
+// --------------------------------------------
+
+%float-xs {
+	@include respond(phone) {
+		float: left;
+	}
+}
+
+%float-sm {
+	@include respond(phablet) {
+		float: left;
+	}
+}
+
+%float-md {
+	@include respond(tablet) {
+		float: left;
+	}
+}
+
+%float-lg {
+	@include respond(standard) {
+		float: left;
+	}
+}
+
+
+// Shape
+%rounded {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+%circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+// ELEMENT STYLING
+// --------------------------------------------
+
+// Glowing Elements
+%plane {
+	-webkit-box-shadow: 0 2px 7px rgba($b, .15);
+	-moz-box-shadow: 0 2px 7px rgba($b, .15);
+	box-shadow: 0 2px 7px rgba($b, .15);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-transition: box-shadow 0.3s;
+	-moz-transition: box-shadow 0.3s;
+	-ms-transition: box-shadow 0.3s;
+	-o-transition: box-shadow 0.3s;
+	transition: box-shadow 0.3s;
+
+	background: $w;
+	border: 1px solid $def-border;
+	padding: 9px;
+
+	&:hover {
+		-webkit-box-shadow: 0 2px 15px rgba($b, .4);
+		-moz-box-shadow: 0 2px 15px rgba($b, .4);
+		box-shadow: 0 2px 15px rgba($b, .4);
+	}
+}
+
+// Inset border
+%inset-border {
+	border-top: 1px solid $def-border;
+	border-bottom: 1px solid $w;
+	clear: both;
+	height: 0;
+}
+
+%seam {
+	@extend %inset-border;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 19px;
+}
+
+%side-lined {
+	overflow: hidden;
+	white-space: nowrap;
+
+	.seam {
+		display: inline-block;
+		width: 100%;
+		margin: 0 15px;
+		position: relative;
+		top: -9px;
+	}
+}
+
+// Replace text with image
+%image-replace {
+	@include scut-image-replace;
+}

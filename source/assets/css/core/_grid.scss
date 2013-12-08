@@ -1,0 +1,138 @@
+// Grid System
+// --------------------------------------------
+
+$gutter-width	: $default-gutter-width/2;
+
+@function gutter() {
+	$gutter: $gutter-width;
+	@return $gutter;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+// centering page horizontally
+.container {
+	@extend %clearfix;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: gutter();
+	padding-right: gutter();
+
+	@include respond(phablet) {
+		width: 750px;
+	}
+	@include respond(tablet) {
+		width: 960px;
+	}
+	@include respond(standard) {
+		width: 1200px;
+	}
+}
+
+// grid wrapper
+.row {
+	@extend %clearfix;
+	margin-left: gutter() * -1;
+	margin-right: gutter() * -1;
+}
+
+// grid
+[class*="col"] {
+	min-height: 1px;
+	padding-left: gutter();
+	padding-right: gutter();
+}
+
+@for $i from 1 through 12 {
+
+	.col-xs-#{$i} {
+		@extend %float-xs;
+
+		@include respond(phone) {
+			width: ($i/12)*100%;
+		}
+	}
+	.offset-xs-#{$i} {
+		@include respond(phone) {
+			margin-left: ($i/12)*100%;
+		}
+	}
+
+	.col-sm-#{$i} {
+		@extend %float-sm;
+		
+		@include respond(phablet) {
+			width: ($i/12)*100%;
+		}
+	}
+	.offset-sm-#{$i} {
+		@include respond(phablet) {
+			margin-left: ($i/12)*100%;
+		}
+	}
+	
+	.col-md-#{$i} {
+		@extend %float-md;
+		
+		@include respond(tablet) {
+			width: ($i/12)*100%;
+		}
+	}
+	.offset-md-#{$i} {
+		@include respond(tablet) {
+			margin-left: ($i/12)*100%;
+		}
+	}
+
+	.col-lg-#{$i} {
+		@extend %float-lg;
+
+		@include respond(standard) {
+			width: ($i/12)*100%;
+		}
+	}
+	.offset-lg-#{$i} {
+		@include respond(standard) {
+			margin-left: ($i/12)*100%;
+		}
+	}
+}
+
+
+
+// toggle element visibility on certain viewport
+// for large screen we don't need to define here because it's the default view
+
+// hidden only on tablet
+.hidden-tablet {
+	@include respond(false, $screen-phablet, $screen-standard - 1) {
+		display: none;
+	}
+}
+
+// visible only on tablet
+.visible-tablet {
+	display: none;
+	
+	@include respond(false, $screen-phablet, $screen-standard - 1) {
+		display: block;
+	}
+}
+
+// hidden only on phone
+.hidden-phone {
+	@include respond(false, $screen-phone-narrow, $screen-phone - 1) {
+		display: none;
+	}
+}
+
+// visible only on phone
+.visible-phone {
+	display: none;
+
+	@include respond(false, $screen-phone-narrow, $screen-phone - 1) {
+		display: block;
+	}
+}

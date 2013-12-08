@@ -1,0 +1,39 @@
+//
+// Tables
+// --------------------------------------------------
+
+
+th {
+	text-align: left;
+}
+
+
+table {
+	border: 1px solid $def-border;
+	margin-bottom: $base-line-height;
+	width: 100%;
+	max-width: 100%;
+	background-color: transparent;
+
+	th,
+	td {
+		padding: 10px 10px 9px;
+		line-height: $base-line-height;
+		vertical-align: top;
+		border: 1px solid $def-border;
+	}
+
+	th {
+		vertical-align: bottom;
+		border-bottom: 2px solid $def-border;
+		padding-top: 9px;
+	}
+
+	> tbody + tbody {
+		border-top: 2px solid $def-border;
+	}
+
+	table {
+		background-color: $bg-color;
+	}
+}

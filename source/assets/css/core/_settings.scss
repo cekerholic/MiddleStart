@@ -1,0 +1,105 @@
+// Variables
+// ============================================
+
+// Typography
+// --------------------------------------------
+
+// Default font-stack
+$sans:      Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$serif:     Cambria, Georgia, serif;
+$mono:      Menlo, Monaco, Consolas, 'Lucida Console', 'Courier New', Courier, monospace;
+
+// fonts-path for @font-face
+$font-path: "../fonts" !default;
+
+@mixin sans {
+	font-family: $sans;
+}
+
+@mixin serif {
+	font-family: $serif;
+}
+
+@mixin mono {
+	font-family: $mono;
+}
+
+@mixin heading {
+	font-family: $sans;
+}
+
+// Body font
+// Using compass/typography/vertical-rhythm
+$base-font-size:        14px; // Default value from Compass is 16px
+$base-line-height:      20px; // Default value from Compass is 24px
+
+// Heading font
+$font-size-h1:          36px !default;
+$leading-h1:            2 !default;
+$font-size-h2:          30px !default;
+$leading-h2:            2 !default;
+$font-size-h3:          24px !default;
+$leading-h3:            1.5 !default;
+$font-size-h4:          18px !default;
+$leading-h4:            1 !default;
+$font-size-h5:          $base-font-size !default;
+$leading-h5:            2 !default;
+$font-size-h6:          ceil($base-font-size * 0.85) !default;
+$leading-h6:            1 !default;
+
+$font-size-blockquote:  18px !default;
+
+
+// Colors
+// --------------------------------------------
+// Pallete
+$w:                     #fff;               //white
+$b:                     #000;               //black
+$grey-darker:           lighten($b, 13.5%); // #222
+$grey-dark:             lighten($b, 20%);   // #333
+$grey:                  lighten($b, 33.5%); // #555
+$silver:                lighten($b, 60%);   // #999
+$grey-lighter:          darken($w, 5%);
+$blue:                  #428bca;
+
+
+$text:                  lighten($b, 20%);
+$bg-color:              $w;
+$link:                  $blue;
+$def-border:            #ddd;
+
+
+
+// Grid
+// --------------------------------------------
+// default grid gutter
+$default-gutter-width:  30px !default;
+
+
+
+// @media-queries breakpoint
+// --------------------------------------------
+// for iMac, HDTV and other screen that larger than common PC/laptop screen viewport
+// @media-queries type: min-width
+$screen-wide:           1441px !default;
+
+// for PC/laptop screen viewport
+// @media-queries type: min-width
+$screen-standard:       1230px !default;
+
+// for tablet screen viewport in landscape mode
+// @media-queries type: min-width
+$screen-tablet:         980px !default;
+
+// for tablet/phablet(phone and tablet hybrid) screen viewport in portrait mode
+// @media-queries type: min-width
+$screen-phablet:        768px !default;
+
+// for phone screen viewport in landscape mode
+// @media-queries type: max-width
+$screen-phone:          767px !default;
+
+// for phone screen viewport in portrait mode
+// @media-queries type: min-width
+$screen-phone-narrow:   320px !default;
+
