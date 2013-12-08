@@ -62,6 +62,8 @@ GEM
     sass (3.2.12)
     sass-media_query_combiner (0.0.6)
       sass (>= 3.2.0)
+    scut (0.6.0)
+      sass (>= 3.2.0)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -87,5 +89,6 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 3.2.0)
+  scut
   sprockets-media_query_combiner
   wdm

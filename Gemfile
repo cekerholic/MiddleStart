@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "middleman" , "~>3.2.0"
 gem 'sprockets-media_query_combiner'
+gem 'scut'
 
 # Activate if you want to use middleman-livereload
 # gem "middleman-livereload",  "~>3.1.0"
