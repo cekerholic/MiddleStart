@@ -23,6 +23,6 @@ MiddleKit is a front-end development starter kit for [Middleman static site gene
 
 ##Demo
 
-http://middleman.cekerholic.com/
+[http://middleman.cekerholic.com/](http://middleman.cekerholic.com/)
 
 
