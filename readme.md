@@ -1,4 +1,4 @@
-#MiddleKit 
+#MiddleStart
 
 MiddleKit is a front-end development starter kit for [Middleman static site generator](http://middlemanapp.com/). This project is heavily inspired by [Bootstrap](http://getbootstrap.com/) but much more simpler.
 
@@ -23,6 +23,6 @@ MiddleKit is a front-end development starter kit for [Middleman static site gene
 
 ##Demo
 
-[http://middleman.cekerholic.com/](http://middleman.cekerholic.com/)
+[middleman.cekerholic.com](http://middleman.cekerholic.com/)
 
 
