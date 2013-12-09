@@ -1,5 +1,5 @@
-/*	Scaffolding
------------------ */
+/*  Scaffolding
+    ----------------- */
 
 // --------------------------------------------
 
@@ -7,64 +7,64 @@
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Establishes a font baseline for the given font-size. */
 @include establish-baseline($base-font-size);
 
 body {
-	@include sans;
-	background: $bg-color;
-	color: $text;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
+  @include sans;
+  background: $bg-color;
+  color: $text;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* prevent FOUT (Flash of Unstyled Text) when using fonts from Typekit or Google Fonts */
 .wf-loading {
-	body {
-		font-family: $sans; // if default font using sans-serif, change the value to $serif
-	}
+  body {
+    font-family: $sans; // if default font using sans-serif, change the value to $serif
+  }
 }
 
 // Positioning & Aligning
-.pull-left 		{ float: left; }
-.pull-right 	{ float: right; }
+.pull-left    { float: left; }
+.pull-right   { float: right; }
 
 
 
 // horizontal rule
 hr {
-	margin-top: $base-line-height;
-	margin-bottom: $base-line-height - 1;
-	border: none;
-	border-top: 1px solid $def-border;
+  margin-top: $base-line-height;
+  margin-bottom: $base-line-height - 1;
+  border: none;
+  border-top: 1px solid $def-border;
 }
 
 
 // Element visibility state
 .hidden {
-	display: none;
+  display: none;
 }
 
 // Make inline element become block element
 .block {
-	display: block;
+  display: block;
 }
 
 // Images
 
 img {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 .img-rounded {
-	@extend %rounded;
+  @extend %rounded;
 }
 
 .img-circle {
-	@extend %circle
+  @extend %circle
 }

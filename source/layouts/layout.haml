@@ -1,27 +1,27 @@
 !!! 5
 %html{:lang => "en-US"}
-	\
-	%head
-		\
-		%meta{:charset => "utf-8"}
-		%meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
-		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-		\
-		%title= data.page.title + " - Name"
-		\
-		= stylesheet_link_tag 'style'
-		\
-		= javascript_include_tag  "libs/head.min.js", "data-headjs-load" => "assets/js/init.js"
+  \
+  %head
+    \
+    %meta{:charset => "utf-8"}
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    \
+    %title= data.page.title + " - MiddleStart"
+    \
+    = stylesheet_link_tag 'style'
+    \
+    = javascript_include_tag  "libs/head.min.js", "data-headjs-load" => "assets/js/init.js"
 
-		\
-	\
-	%body
-		\
-		
-		= partial('modules/header')
-		\
-		= yield
-		\
-		= partial('modules/footer')
-		\
+    \
+  \
+  %body
+    \
+    
+    = partial('modules/header')
+    \
+    = yield
+    \
+    = partial('modules/footer')
+    \
 

@@ -2,51 +2,51 @@
 // -------------------------
 
 // Base icon Class Definition
-.icon 				{ @extend %fa }
+.icon             { @extend %fa }
 
 // Sample: Calling individual icon
-.icon-facebook 		{ @extend %fa-facebook }
-.icon-twitter 		{ @extend %fa-twitter }
-.icon-linkedin 		{ @extend %fa-linkedin }
-.icon-gplus 		{ @extend %fa-google-plus }
-.icon-pinterest		{ @extend %fa-pinterest }
-.icon-dribbble		{ @extend %fa-dribbble }
-.icon-comment		{ @extend %fa-comment }
+.icon-facebook    { @extend %fa-facebook }
+.icon-twitter     { @extend %fa-twitter }
+.icon-linkedin    { @extend %fa-linkedin }
+.icon-gplus       { @extend %fa-google-plus }
+.icon-pinterest   { @extend %fa-pinterest }
+.icon-dribbble    { @extend %fa-dribbble }
+.icon-comment     { @extend %fa-comment }
 
 // Sample: Icon styling
 $icon-color: $silver;
 
 .icon {
-	color: $icon-color;
-	vertical-align: middle;
+  color: $icon-color;
+  vertical-align: middle;
 }
 .icon-2x { @extend %fa-2x }
 
 // Sample: icons with border around them
 %icon-styled {
-	width: 30px;
-	height: 30px;
-	border: 3px solid $icon-color;
-	text-align: center;
-	margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid $icon-color;
+  text-align: center;
+  margin-right: 5px;
 
-	.icon {
-		color: $icon-color;
-		display: inline-block;
-		line-height: 24px;
-		font-size: 16px;
-	}
+  .icon {
+    color: $icon-color;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 16px;
+  }
 }
 
 // Sample: icon with various shape 
 .icon-circle {
-	@extend %circle;
-	@extend %icon-styled;
+  @extend %circle;
+  @extend %icon-styled;
 }
 .icon-rounded {
-	@extend %rounded;
-	@extend %icon-styled;
+  @extend %rounded;
+  @extend %icon-styled;
 }
 .icon-square {
-	@extend %icon-styled;
+  @extend %icon-styled;
 }

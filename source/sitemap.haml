@@ -1,5 +1,5 @@
 / Generate sitemap to list all pages
 %ol
-	- sitemap.resources.select { |page| page.path =~ /\.html/ }.each do |page|
-		%li
-			%a{:href => "#{page.url}", :target => "_blank"}= "#{page.path}"
+  - sitemap.resources.select { |page| page.path =~ /\.html/ }.each do |page|
+    %li
+      %a{:href => "#{page.url}", :target => "_blank"}= "#{page.path}"

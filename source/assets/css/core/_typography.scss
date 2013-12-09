@@ -1,29 +1,29 @@
-/*	Typography
------------------ */
+/*  Typography
+    ----------------- */
 
 // Body Text
 // --------------------------------------------
 
 p {
-	margin: 0 0 ceil($base-line-height / 2);
+  margin: 0 0 ceil($base-line-height / 2);
 }
 
 a {
-	@include link();
-	text-decoration: none;
+  @include link();
+  text-decoration: none;
 
-	&:hover {
-		text-decoration: underline;
-	}
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 small,
 .small {
-	font-size: 85%;
+  font-size: 85%;
 }
 
 abbr[title] {
-	cursor: help;
+  cursor: help;
 }
 
 
@@ -31,9 +31,9 @@ abbr[title] {
 // Alignment
 // --------------------------------------------
 
-.text-left 		{ text-align: left }
-.text-right 	{ text-align: right }
-.text-center 	{ text-align: center }
+.text-left    { text-align: left }
+.text-right   { text-align: right }
+.text-center  { text-align: center }
 
 
 
@@ -41,59 +41,59 @@ abbr[title] {
 // --------------------------------------------
 
 .h1 {
-	font-size: $font-size-h1;
-	line-height: $base-line-height * $leading-h1;
+  font-size: $font-size-h1;
+  line-height: $base-line-height * $leading-h1;
 }
 .h2 {
-	font-size: $font-size-h2;
-	line-height: $base-line-height * $leading-h2;
+  font-size: $font-size-h2;
+  line-height: $base-line-height * $leading-h2;
 }
 .h3 {
-	font-size: $font-size-h3;
-	line-height: $base-line-height * $leading-h3;
+  font-size: $font-size-h3;
+  line-height: $base-line-height * $leading-h3;
 }
 .h4 {
-	font-size: $font-size-h4;
-	line-height: $base-line-height * $leading-h4;
+  font-size: $font-size-h4;
+  line-height: $base-line-height * $leading-h4;
 }
 .h5 {
-	font-size: $font-size-h5;
-	line-height: $base-line-height * $leading-h5;
+  font-size: $font-size-h5;
+  line-height: $base-line-height * $leading-h5;
 }
 .h6 {
-	font-size: $font-size-h6;
-	line-height: $base-line-height * $leading-h6;
+  font-size: $font-size-h6;
+  line-height: $base-line-height * $leading-h6;
 }
 
 h1 {
-	@extend .h1;
-	margin-top: ceil($base-line-height / 2);
-	margin-bottom: ceil($base-line-height / 2);
+  @extend .h1;
+  margin-top: ceil($base-line-height / 2);
+  margin-bottom: ceil($base-line-height / 2);
 }
 h2 {
-	@extend .h2;
-	margin-top: ceil($base-line-height / 2);
-	margin-bottom: ceil($base-line-height / 2);
+  @extend .h2;
+  margin-top: ceil($base-line-height / 2);
+  margin-bottom: ceil($base-line-height / 2);
 }
 h3 {
-	@extend .h3;
-	margin-top: ceil($base-line-height * 0.75);
-	margin-bottom: ceil($base-line-height * 0.75);
+  @extend .h3;
+  margin-top: ceil($base-line-height * 0.75);
+  margin-bottom: ceil($base-line-height * 0.75);
 }
 h4 {
-	@extend .h4;
-	margin-top: ceil($base-line-height / 2);
-	margin-bottom: ceil($base-line-height / 2);
+  @extend .h4;
+  margin-top: ceil($base-line-height / 2);
+  margin-bottom: ceil($base-line-height / 2);
 }
 h5 {
-	@extend .h5;
-	margin-top: ceil($base-line-height / 2);
-	margin-bottom: ceil($base-line-height / 2);
+  @extend .h5;
+  margin-top: ceil($base-line-height / 2);
+  margin-bottom: ceil($base-line-height / 2);
 }
 h6 {
-	@extend .h6;
-	margin-top: ceil($base-line-height / 2);
-	margin-bottom: ceil($base-line-height / 2);
+  @extend .h6;
+  margin-top: ceil($base-line-height / 2);
+  margin-bottom: ceil($base-line-height / 2);
 }
 
 
@@ -102,80 +102,80 @@ h6 {
 
 ul,
 ol {
-	margin-top: 0;
-	margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 
-	ul, ol {
-		margin-bottom: 0;
-	}
+  ul, ol {
+    margin-bottom: 0;
+  }
 }
 
 .list-unstyled {
-	@extend %list-unstyled;
+  @extend %list-unstyled;
 }
 
 .list-inline {
-	@extend %list-inline;
+  @extend %list-inline;
 }
 
 dl {
-	margin-top: 0;
-	margin-bottom: ceil($base-line-height / 2);
+  margin-top: 0;
+  margin-bottom: ceil($base-line-height / 2);
 }
 
 dt,
 dd {
-	line-height: $base-line-height
+  line-height: $base-line-height
 }
 
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 dd {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .dl-horizontal {
 
-	dt {
-		@include respond(phablet) {
-			float: left;
-			clear: left;
-			width: 160px;
-			overflow: hidden;
-		}
-	}
-	dd {
-		@include respond(phablet) {
-			margin-left: 180px;
-		}
-	}
+  dt {
+    @include respond(phablet) {
+      float: left;
+      clear: left;
+      width: 160px;
+      overflow: hidden;
+    }
+  }
+  dd {
+    @include respond(phablet) {
+      margin-left: 180px;
+    }
+  }
 }
 
 blockquote {
-	margin: 0 0 ceil($base-line-height / 2);
-	padding: 0 $base-line-height ceil($base-line-height / 2);
-	border-left: 5px solid $def-border;
+  margin: 0 0 ceil($base-line-height / 2);
+  padding: 0 $base-line-height ceil($base-line-height / 2);
+  border-left: 5px solid $def-border;
 
-	p {
-		font-size: $font-size-blockquote;
-		line-height: ceil($base-line-height * 1.5);
-		margin-bottom: ceil($base-line-height / 2);
+  p {
+    font-size: $font-size-blockquote;
+    line-height: ceil($base-line-height * 1.5);
+    margin-bottom: ceil($base-line-height / 2);
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-	small {
-		display: block;
-		color: $silver;
-		line-height: $base-line-height;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  small {
+    display: block;
+    color: $silver;
+    line-height: $base-line-height;
 
-		&:before {
-			content: '\2014 \00A0';
-		}
-	}
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
 }
 
 // Inline and block code styles
@@ -183,41 +183,41 @@ code,
 kbd,
 pre,
 samp {
-	font-family: $mono;
+  font-family: $mono;
 }
 
 // Inline code
 code {
-	padding: 2px 4px;
-	font-size: 90%;
-	color: shade($link, 30%);
-	background-color: tint($link, 90%);
-	white-space: nowrap;
-	border-radius: 3px;
-	line-height: $base-line-height - 1;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: shade($link, 30%);
+  background-color: tint($link, 90%);
+  white-space: nowrap;
+  border-radius: 3px;
+  line-height: $base-line-height - 1;
 }
 
 // Blocks of code
 pre {
-	display: block;
-	padding: (($base-line-height - 2) / 2);
-	margin: 0 0 ($base-line-height / 2);
-	font-size: ($base-font-size - 1);
-	line-height: $base-line-height;
-	word-break: break-all;
-	word-wrap: break-word;
-	color: $grey;
-	background-color: $grey-lighter;
-	border: 1px solid $def-border;
-	border-radius: 3px;
+  display: block;
+  padding: (($base-line-height - 2) / 2);
+  margin: 0 0 ($base-line-height / 2);
+  font-size: ($base-font-size - 1);
+  line-height: $base-line-height;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $grey;
+  background-color: $grey-lighter;
+  border: 1px solid $def-border;
+  border-radius: 3px;
 
-	// Account for some code outputs that place code tags in pre tags
-	code {
-		padding: 0;
-		font-size: inherit;
-		color: inherit;
-		white-space: pre-wrap;
-		background-color: transparent;
-		border-radius: 0;
-	}
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
 }

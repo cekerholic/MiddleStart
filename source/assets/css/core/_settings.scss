@@ -13,19 +13,19 @@ $mono:      Menlo, Monaco, Consolas, 'Lucida Console', 'Courier New', Courier, m
 $font-path: "../fonts" !default;
 
 @mixin sans {
-	font-family: $sans;
+  font-family: $sans;
 }
 
 @mixin serif {
-	font-family: $serif;
+  font-family: $serif;
 }
 
 @mixin mono {
-	font-family: $mono;
+  font-family: $mono;
 }
 
 @mixin heading {
-	font-family: $sans;
+  font-family: $sans;
 }
 
 // Body font
