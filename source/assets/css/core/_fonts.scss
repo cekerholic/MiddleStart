@@ -1,16 +1,27 @@
-@mixin font-face($family, $path, $weight: normal, $style: normal ) {
+@mixin font-face(
+  $family, // font-family
+  $font-file, // font-filename. We just need to define the font filename only (without file extension), font path is already defined in settings.scss
+  $weight: normal, // font-weight
+  $style: normal //font-style
+  ) {
   @font-face {
     font-family: $family;
-    src: url('#{$font-path}/#{$path}.eot');
+    src: url('#{$font-path}/#{$font-file}.eot');
     src: 
-      url('#{$font-path}/#{$path}.eot') format('embedded-opentype'),
-      url('#{$font-path}/#{$path}.woff') format('woff'),
-      url('#{$font-path}/#{$path}.ttf') format('truetype'),
-      url('#{$font-path}/#{$path}.svg') format('svg');
+      url('#{$font-path}/#{$font-file}.eot') format('embedded-opentype'),
+      url('#{$font-path}/#{$font-file}.woff') format('woff'),
+      url('#{$font-path}/#{$font-file}.ttf') format('truetype'),
+      url('#{$font-path}/#{$font-file}.svg') format('svg');
     font-weight: $weight;
     font-style: $style;
   }
 }
 
-// Example usage
-// @include font-face('Proxima Nova', 'proximanova-reg'); // Regular
+// EXAMPLE USAGE
+// --------------------------------------------
+
+// font-family: 'My Font'; font-weight: normal; font-style: normal;
+// @include font-face('My Font', 'myFont-400');
+
+// font-family: 'My Font'; font-weight: bold; font-style: italic;
+// @include font-face('My Font', 'myFont-700-it', bold, italic);
