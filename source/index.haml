@@ -1,11 +1,18 @@
 ---
-title: Home
+title: Element Test
 ---
 
+
+:erb
+  <a href="https://github.com/cekerholic/MiddleStart"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
 / Sample Files
 .container
   
+  %h1 
+    %a{:href => "https://github.com/cekerholic/MiddleStart"} MiddleStart
+    Element Testing
+
   %header.h2.sample-header 
     %a{:href => "#"} Typography
   
@@ -192,3 +199,25 @@ title: Home
       %li.icon-rounded
         %span.icon.icon-comment{:href => "#"} 
 
+  %header.h2.sample-header 
+    %a{:href => "#"} Grid Test
+  
+  .row.sample-grid.text-center
+    .col-md-1 
+      .h6 .col-md-1
+    .col-md-2 
+      .h6 .col-md-2
+    .col-md-3 
+      .h6 .col-md-3
+    .col-md-6 
+      .h6 .col-md-6
+  .row.sample-grid.text-center
+    .col-md-4 
+      .h6 .col-md-4
+    .col-md-5 
+      .h6 .col-md-5
+    .col-md-3 
+      .h6 .col-md-3
+  .row.sample-grid.text-center
+    .col-md-6.offset-md-3 
+      .h6 .col-md-6.offset-md-3 

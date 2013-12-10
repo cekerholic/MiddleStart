@@ -19,3 +19,14 @@
 .sample-subheader {
   margin-bottom: 10px;
 }
+
+.sample-grid {
+  margin-bottom: 80px;
+
+  [class*='col'] {
+    border: 1px solid $def-border;
+    background: $grey-lighter;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
