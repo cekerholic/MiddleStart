@@ -1,14 +1,14 @@
-/* 	------------------------------------------------------------
-	------------------------------------------------------------
-	
-	MiddleKit
+/*  ------------------------------------------------------------
+  ------------------------------------------------------------
+  
+  MiddleKit
 
-	Version: 	 1.0.0
-	Author: 	 Aris FM
-	Author URI:  http://about.me/cekerholic
+  Version:      1.0.1
+  Author:       Aris FM
+  Author URI:   http://about.me/cekerholic
 
-	------------------------------------------------------------
-	------------------------------------------------------------ */
+  ------------------------------------------------------------
+  ------------------------------------------------------------ */
 /*
 * Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
 * v0.5.0
@@ -104,7 +104,7 @@
   content: "\f17d"; }
 
 /*  Reset
-    ----------------- */
+  ----------------- */
 article,
 aside,
 details,
@@ -322,8 +322,8 @@ iframe {
     -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); }
 
-/*	Scaffolding
------------------ */
+/*  Scaffolding
+    ----------------- */
 /* apply a natural box layout model to all elements */
 *,
 *:before,
@@ -393,8 +393,8 @@ img {
 .visible-phone {
   display: none; }
   
-/*	Typography
------------------ */
+/*  Typography
+    ----------------- */
 p {
   margin: 0 0 10px; }
 
@@ -545,8 +545,8 @@ pre {
     background-color: transparent;
     border-radius: 0; }
 
-/*	Forms
------------------ */
+/*  Forms
+    ----------------- */
 form p {
   margin-bottom: 20px; }
 
@@ -1035,6 +1035,14 @@ table {
 
 .sample-subheader {
   margin-bottom: 10px; }
+
+.sample-grid {
+  margin-bottom: 80px; }
+  .sample-grid [class*='col'] {
+    border: 1px solid #dddddd;
+    background: #f2f2f2;
+    padding-top: 40px;
+    padding-bottom: 40px; }
 
 @media (max-width: 767px) {
   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
