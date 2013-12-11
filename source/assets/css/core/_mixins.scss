@@ -1,10 +1,10 @@
-// Custom Mixins Library
-// --------------------------------------------------------------------------
+// Global Mixins
+// ============================================
 
 
-
-// Drop-down menu
-@mixin dropdown(
+// Absolute Position Shorthand
+// --------------------------------------------
+@mixin absolute(
   $d-left: 0,
   $d-top: 0,
   $d-width: false,
@@ -32,57 +32,73 @@
 
 
 // Gradient background
-// shorthand for gradient + include IE hacks
-// --------------------------------------------------------------------------
+// shorthand for CSS gradient + IE hacks (IE hacks for linear gradient only)
+// Default value is simply make the second color 10% darker than base color
+// --------------------------------------------
 
-//Light to Dark
-//base color, darken color (in percent)
-$grad-c-def : #0b859f;
+$grad-color-def : #0b859f;
 $grad-value : 10%;
 $grad-value-def : 10%;
 
-@mixin grad-dark(
-  $grad-c: $grad-c-def,
-  $grad-value: false,
-  $grad-2: false
+@mixin gradient(
+  $color: $grad-color-def, // Hexa/RGB/RGBA/HSL/HSLA/predefined. Base color.
+  $second-color: false, // Value: Hexa/RGB/RGBA/HSL/HSLA/predefined. Second color.
+  $value: false, // Percent. Get second color by darkening or lightening base color.
+  $to-light: false, // Boolean. Make second color lighter than base color.
+  $radial: false // Boolean. Make radial gradient
   ) {
-  @if not $grad-value and not $grad-2 {
-    @include filter-gradient($grad-c, darken($grad-c, $grad-value-def)); /* for IE9 & below */
-    @include background-image(linear-gradient($grad-c, darken($grad-c, $grad-value-def)));
-  }
-  @if $grad-value and not $grad-2 {
-    @include filter-gradient($grad-c, darken($grad-c, $grad-value)); /* for IE9 & below */
-    @include background-image(linear-gradient($grad-c, darken($grad-c, $grad-value)));
-  }
-  @if not $grad-value and $grad-2 {
-    @include filter-gradient($grad-c, $grad-2); /* for IE9 & below */
-    @include background-image(linear-gradient($grad-c, $grad-2));
-  }
-}
-  
-//Dark to Light
-//base color, lighten color (in percent)
-@mixin grad-light(
-  $grad-c: $grad-c-def,
-  $grad-value: false
-  ) {
-  @include filter-gradient($grad-c, lighten($grad-c, $grad-value-def)); /* for IE9 & below */
-  @include background-image(linear-gradient($grad-c, lighten($grad-c, $grad-value-def)));
 
-  @if $grad-value {
-    @include filter-gradient($grad-c, lighten($grad-c, $grad-value)); /* for IE9 & below */
-    @include background-image(linear-gradient($grad-c, lighten($grad-c, $grad-value)));
+  @if not $radial {
+    @if not $second-color {
+      @if $value and not $to-light {
+        @include filter-gradient( $color, darken($color, $value) );
+        @include background-image(linear-gradient( $color, darken($color, $value) ));
+      }
+      @if $value and $to-light {
+        @include filter-gradient( $color, lighten($color, $value) );
+        @include background-image(linear-gradient( $color, lighten($color, $value) ));
+      }
+      @if not $value and $to-light {
+        @include filter-gradient( $color, lighten($color, $grad-value-def) );
+        @include background-image(linear-gradient( $color, lighten($color, $grad-value-def) ));
+      }
+      @if not $value and not $to-light {
+        @include filter-gradient( $color, darken($color, $grad-value-def) );
+        @include background-image(linear-gradient( $color, darken($color, $grad-value-def) ));
+      }
+    }
+    @else {
+      @include filter-gradient( $color, $second-color );
+      @include background-image(linear-gradient( $color, $second-color ));
+    }
+  }
+  // Radial
+  @else {
+    @if not $second-color {
+      @if $value and not $to-light      { @include background-image(radial-gradient( $color, darken($color, $value) )); }
+      @if $value and $to-light          { @include background-image(radial-gradient( $color, lighten($color, $value) )); }
+      @if not $value and $to-light      { @include background-image(radial-gradient( $color, lighten($color, $grad-value-def) )); }
+      @if not $value and not $to-light  { @include background-image(radial-gradient( $color, darken($color, $grad-value-def) )); }
+    }
+    @else                               { @include background-image(radial-gradient( $color, $second-color )); }
   }
 }
-  
+
 
 // Reset List
+// Remove list style and left padding from list
+// --------------------------------------------
+
 @mixin list-unstyled {
   list-style: none;
   padding-left: 0;
 } 
 
+
 // Links
+// Set link color at various state (normal/:visited, :hover, :active)
+// --------------------------------------------
+
 @mixin link(
   $link-col: $link,
   $link-hover: false,
@@ -115,7 +131,11 @@ $grad-value-def : 10%;
   }
 }
 
+
 // Selection
+// Set background and text color when user do text selection
+// --------------------------------------------
+
 @mixin selection($background, $color, $element:false) {
   @if($element) {
     &::-moz-selection{ background:$background; color:$color; text-shadow:none; }
@@ -126,7 +146,10 @@ $grad-value-def : 10%;
   }
 }
 
+
 // Media Queries
+// Media queries for various breakpoints (setting breakpoints in settings.scss)
+// --------------------------------------------
 
 @mixin respond($media: true, $query-width-min: false, $query-width-max: false) {
   @if $media == wide {
@@ -153,11 +176,20 @@ $grad-value-def : 10%;
 }
 
 
+// Tab focus
+// form element style when navigating using tab key
+// --------------------------------------------
+
 @mixin tab-focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
+
+// Input focus
+// form element style on :focus
+// --------------------------------------------
 
 @mixin input-focus($color: #66afe9) {
   $color-rgba: rgba(red($color), green($color), blue($color), .6);
@@ -168,12 +200,22 @@ $grad-value-def : 10%;
   }
 }
 
+
+// Placeholder
+// form element placeholder color
+// --------------------------------------------
+
 @mixin placeholder($color: $silver) {
   &:-moz-placeholder            { color: $color; } // Firefox 4-18
   &::-moz-placeholder           { color: $color; } // Firefox 19+
   &:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
   &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
 }
+
+
+// Button
+// Button styling on various state(normal, :hover, :active, disabled)
+// --------------------------------------------
 
 @mixin button-color($color, $background, $border) {
   color: $color;
