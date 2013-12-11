@@ -1,6 +1,8 @@
-/*  Forms
-    ----------------- */
+// Forms
+// ============================================
 
+
+// Wrap label and input using p
 form p {
   margin-bottom: $base-line-height;
 }
@@ -174,7 +176,9 @@ input[type="checkbox"],
   }
 }
 
+
 // Button
+// --------------------------------------------
 
 button,
 input[type="submit"],
@@ -222,6 +226,7 @@ input[type="button"] {
     @include opacity(.65);
     @include box-shadow(none);
   }
+  
   // Block button
   &.block {
     display: block;

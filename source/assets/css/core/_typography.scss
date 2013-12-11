@@ -1,5 +1,6 @@
-/*  Typography
-    ----------------- */
+// Typography
+// ============================================
+
 
 // Body Text
 // --------------------------------------------
@@ -27,14 +28,12 @@ abbr[title] {
 }
 
 
-
 // Alignment
 // --------------------------------------------
 
 .text-left    { text-align: left }
 .text-right   { text-align: right }
 .text-center  { text-align: center }
-
 
 
 // Headings
@@ -100,6 +99,7 @@ h6 {
 // Lists
 // --------------------------------------------
 
+// Ordered & Unordered
 ul,
 ol {
   margin-top: 0;
@@ -110,14 +110,17 @@ ol {
   }
 }
 
+// Remove list-style and left padding
 .list-unstyled {
   @extend %list-unstyled;
 }
 
+// Create inline list
 .list-inline {
   @extend %list-inline;
 }
 
+// Descriptions list
 dl {
   margin-top: 0;
   margin-bottom: ceil($base-line-height / 2);
@@ -136,6 +139,7 @@ dd {
   margin-left: 0;
 }
 
+// Horizontal, only on large view
 .dl-horizontal {
 
   dt {
@@ -153,6 +157,9 @@ dd {
   }
 }
 
+
+// Blockquotes
+// --------------------------------------------
 blockquote {
   margin: 0 0 ceil($base-line-height / 2);
   padding: 0 $base-line-height ceil($base-line-height / 2);
@@ -177,6 +184,10 @@ blockquote {
     }
   }
 }
+
+
+// Code
+// --------------------------------------------
 
 // Inline and block code styles
 code,
