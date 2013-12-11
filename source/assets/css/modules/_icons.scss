@@ -1,10 +1,7 @@
-// font-awesome classes is converted to placeholder to avoid bloated CSS of unused icons. 
-// -------------------------
-
-// Base icon Class Definition
+// Calling Base icon class definition
 .icon             { @extend %fa }
 
-// Sample: Calling individual icon
+// Calling icons by extending from font-awesome library
 .icon-facebook    { @extend %fa-facebook }
 .icon-twitter     { @extend %fa-twitter }
 .icon-linkedin    { @extend %fa-linkedin }
@@ -12,6 +9,8 @@
 .icon-pinterest   { @extend %fa-pinterest }
 .icon-dribbble    { @extend %fa-dribbble }
 .icon-comment     { @extend %fa-comment }
+.icon-2x          { @extend %fa-2x }
+
 
 // Sample: Icon styling
 $icon-color: $silver;
@@ -20,9 +19,9 @@ $icon-color: $silver;
   color: $icon-color;
   vertical-align: middle;
 }
-.icon-2x { @extend %fa-2x }
 
-// Sample: icons with border around them
+
+// Sample: icons with bordered wrapper
 %icon-styled {
   width: 30px;
   height: 30px;
