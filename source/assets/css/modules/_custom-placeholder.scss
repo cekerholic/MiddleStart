@@ -1,0 +1,46 @@
+// Custom Element Placeholder
+// ============================================
+
+// Glowing Elements
+%plane {
+  -webkit-box-shadow: 0 2px 7px rgba($b, .15);
+  -moz-box-shadow: 0 2px 7px rgba($b, .15);
+  box-shadow: 0 2px 7px rgba($b, .15);
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -ms-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+
+  background: $w;
+  border: 1px solid $def-border;
+  padding: 19px;
+
+  &:hover {
+    -webkit-box-shadow: 0 2px 15px rgba($b, .2);
+    -moz-box-shadow: 0 2px 15px rgba($b, .2);
+    box-shadow: 0 2px 15px rgba($b, .2);
+  }
+}
+
+// Inset border base style
+%inset-border {
+  border-top: 1px solid $def-border;
+  border-bottom: 1px solid $w;
+  clear: both;
+  height: 0;
+}
+
+// Inset border
+%seam {
+  @extend %inset-border;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 19px;
+}
+
