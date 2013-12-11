@@ -1,6 +1,7 @@
 // Variables
 // ============================================
 
+
 // Typography
 // --------------------------------------------
 
@@ -12,28 +13,12 @@ $mono:      Menlo, Monaco, Consolas, 'Lucida Console', 'Courier New', Courier, m
 // fonts-path for @font-face
 $font-path: "../fonts" !default;
 
-@mixin sans {
-  font-family: $sans;
-}
-
-@mixin serif {
-  font-family: $serif;
-}
-
-@mixin mono {
-  font-family: $mono;
-}
-
-@mixin heading {
-  font-family: $sans;
-}
-
 // Body font
-// Using compass/typography/vertical-rhythm
+// Reference: http://compass-style.org/reference/compass/typography/vertical_rhythm/
 $base-font-size:        14px; // Default value from Compass is 16px
 $base-line-height:      20px; // Default value from Compass is 24px
 
-// Heading font
+// Headings font
 $font-size-h1:          36px !default;
 $leading-h1:            2 !default;
 $font-size-h2:          30px !default;
@@ -44,42 +29,46 @@ $font-size-h4:          18px !default;
 $leading-h4:            1 !default;
 $font-size-h5:          $base-font-size !default;
 $leading-h5:            1 !default;
-$font-size-h6:          ceil($base-font-size * 0.85) !default;
+$font-size-h6:          ceil($base-font-size * 0.85) !default; // = 12px
 $leading-h6:            1 !default;
 
+// Blockquote
 $font-size-blockquote:  18px !default;
 
 
 // Colors
 // --------------------------------------------
+
 // Pallete
-$w:                     #fff;               //white
-$b:                     #000;               //black
+$w:                     #fff;               // white
+$b:                     #000;               // black
 $grey-darker:           lighten($b, 13.5%); // #222
 $grey-dark:             lighten($b, 20%);   // #333
 $grey:                  lighten($b, 33.5%); // #555
 $silver:                lighten($b, 60%);   // #999
-$grey-lighter:          darken($w, 5%);
+$grey-lighter:          darken($w, 5%);     // #f2f2f2
 $blue:                  #428bca;
 
-
-$text:                  lighten($b, 20%);
-$bg-color:              $w;
-$link:                  $blue;
-$def-border:            #ddd;
-
+// Element colors
+$text:                  $grey-dark; // Text color
+$bg-color:              $w;         // Background color
+$link:                  $blue;      // Link color
+$def-border:            #ddd;       // Border color
 
 
 // Grid
 // --------------------------------------------
-// default grid gutter
-$default-column-number:    12 !default;
-$default-gutter-width:     30px !default;
 
+// columns number
+$default-column-number:    12 !default;
+
+// gutter width
+$default-gutter-width:     30px !default;
 
 
 // @media-queries breakpoint
 // --------------------------------------------
+
 // for iMac, HDTV and other screen that larger than common PC/laptop screen viewport
 // @media-queries type: min-width
 $screen-wide:           1441px !default;
