@@ -1,35 +1,75 @@
-/*  ------------------------------------------------------------
-  ------------------------------------------------------------
-  
-  MiddleKit
-
-  Version:      1.0.1
-  Author:       Aris FM
-  Author URI:   http://about.me/cekerholic
-
-  ------------------------------------------------------------
-  ------------------------------------------------------------ */
+/*!
+ * MiddleKit v1.0.1 by @Aris_FM http://about.me/cekerholic
+ * Copyright 2013 Aris FM
+ * Licensed under http://opensource.org/licenses/MIT
+ *
+ */
 
 
-// Core Compass
+// DEPENDENCIES
+// --------------------------------------------
+
+// Compass Framework
 @import "compass";
+
+// Scut: Sass-CSS Utilities. Read more here: http://davidtheclark.github.io/scut/
 @import "scut";
 
-// Core Framework
-@import "core/settings";
+// Modified Font Awesome. Font Awesome classes is converted to Sass placeholders, so it won't generate any CSS unless they're extended. Sample at "modules/icons"
 @import "core/font-awesome";
+
+
+
+// CORE FRAMEWORK
+// --------------------------------------------
+
+// better cross-browser consistency in the default styling of HTML elements
+@import "core/normalize";
+
+// Default MiddleKit variables
+@import "core/settings"; 
+
+// Font mixins
 @import "core/fonts";
+
+// Global mixins
 @import "core/mixins";
-@import "core/reset";
+
+// Sass Placeholder
 @import "core/placeholder";
+
+// Base layout structure
 @import "core/scaffolding";
+
+// Grid
 @import "core/grid";
+
+// Typography
 @import "core/typography";
+
+// Forms
 @import "core/forms";
+
+// Table
 @import "core/table";
 
-// Modules
+
+
+// CUSTOM MODULES
+// All custom CSS should be here
+// --------------------------------------------
+
+// This is for sample only
+
+// Icons
 @import "modules/icons";
+
+// Header
 @import "modules/header";
+
+// Footer
 @import "modules/footer";
+
+// Sample usage, used for demo
 @import "modules/sample";
+
