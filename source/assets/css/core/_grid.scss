@@ -1,15 +1,44 @@
+// Grid
+// ============================================
+
+
+// Float grid only when on their respective viewport
+// --------------------------------------------
+
+%float-xs {
+  @include respond(phone) {
+    float: left;
+  }
+}
+
+%float-sm {
+  @include respond(phablet) {
+    float: left;
+  }
+}
+
+%float-md {
+  @include respond(tablet) {
+    float: left;
+  }
+}
+
+%float-lg {
+  @include respond(standard) {
+    float: left;
+  }
+}
+
+
 // Grid System
 // --------------------------------------------
 
+// Gutter need to be divided. One for left padding, and one for right padding.
 $gutter-width : $default-gutter-width/2;
 
 @function gutter() {
   $gutter: $gutter-width;
   @return $gutter;
-}
-
-.clearfix {
-  @extend %clearfix;
 }
 
 // centering page horizontally
@@ -38,7 +67,6 @@ $gutter-width : $default-gutter-width/2;
   margin-right: gutter() * -1;
 }
 
-// grid
 [class*="col"] {
   min-height: 1px;
   padding-left: gutter();
@@ -97,42 +125,5 @@ $gutter-width : $default-gutter-width/2;
     @include respond(standard) {
       margin-left: ($i/$default-column-number)*100%;
     }
-  }
-}
-
-
-
-// toggle element visibility on certain viewport
-// for large screen we don't need to define here because it's the default view
-
-// hidden only on tablet
-.hidden-tablet {
-  @include respond(false, $screen-phablet, $screen-standard - 1) {
-    display: none;
-  }
-}
-
-// visible only on tablet
-.visible-tablet {
-  display: none;
-  
-  @include respond(false, $screen-phablet, $screen-standard - 1) {
-    display: block;
-  }
-}
-
-// hidden only on phone
-.hidden-phone {
-  @include respond(false, $screen-phone-narrow, $screen-phone - 1) {
-    display: none;
-  }
-}
-
-// visible only on phone
-.visible-phone {
-  display: none;
-
-  @include respond(false, $screen-phone-narrow, $screen-phone - 1) {
-    display: block;
   }
 }
