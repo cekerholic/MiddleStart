@@ -8,10 +8,12 @@
 page "sitemap.html", :layout => false
 
 # Livereload Module
-# activate :livereload, :apply_js_live => false, :apply_css_live => false
+activate :livereload, :apply_js_live => false, :apply_css_live => false
 
-# Gather every @media-queries rule into one block
+# combine every sass @media-queries rules into one block
 require 'sass-media_query_combiner'
+
+# Scut Sass Utilities
 require 'scut'
 
 # Compass config
