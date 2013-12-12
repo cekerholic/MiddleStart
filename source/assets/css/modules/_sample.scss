@@ -10,7 +10,7 @@
   margin-bottom: 20px;
 
   a {
-    @include link($text, $link);
+    @include link($text, $blue);
 
     &:hover {
       text-decoration: none;
@@ -27,8 +27,66 @@
 
   [class*='col'] {
     border: 1px solid $def-border;
-    background: $grey-lighter;
+    background-color: $grey-lighter;
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  &.gradient-test {
+    [class*='col'] {
+      border: none;
+    }
+  }
+}
+
+// GRADIENT TESTING
+// Linear
+.linear-default {
+  @include gradient( $w )
+}
+.linear-custom-value {
+  @include gradient( $blue, $value: 50% )
+  // or
+  // @include gradient( $blue, false, 50% )
+}
+.linear-to-light {
+  @include gradient( #eee, $to-light: true )
+  // or
+  // @include gradient( #eee, false, false, true )
+}
+.linear-to-light-custom-value {
+  @include gradient( $blue, $to-light: true, $value: 50% )
+  // or
+  // @include gradient( $blue, false, 50%, true )
+}
+.linear-custom-color {
+  @include gradient( $blue, magenta )
+}
+
+
+// Radial
+.radial-default {
+  @include gradient( $w, $radial: true )
+  // or
+  // @include gradient( $w, false, false, false, true )
+}
+.radial-custom-value {
+  @include gradient( $blue, $value: 50%, $radial: true )
+  // or
+  // @include gradient( $blue, false, 50%, true )
+}
+.radial-to-light {
+  @include gradient( #eee, $to-light: true, $radial: true )
+  // or
+  // @include gradient( #eee, false, false, true, true )
+}
+.radial-to-light-custom-value {
+  @include gradient( $blue, $to-light: true, $value: 50%, $radial: true )
+  // or
+  // @include gradient( $blue, false, 50%, true, true )
+}
+.radial-custom-color {
+  @include gradient( $blue 20px, (magenta 30px, yellow), $radial: true )
+  // @include gradient( $blue, magenta, $radial: true )
+  // or
+  // @include gradient( $blue, magenta, false, false, true )
 }
