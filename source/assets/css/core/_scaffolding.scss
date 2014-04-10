@@ -15,6 +15,16 @@
 }
 
 // Establishes a font baseline for the given font-size.
+@mixin establish-baseline($font-size: $base-font-size) {
+  * html {
+    font-size: 100% * $font-size / $browser-default-font-size;
+  }
+  html {
+    font-size: $font-size;
+    line-height: $base-line-height/$base-font-size;
+  }
+}
+
 @include establish-baseline($base-font-size);
 
 body {
