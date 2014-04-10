@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "middleman" , "~>3.2.0"
+gem "middleman" , "~>3.3.1"
 
 # media_query_combiner to combine sass @media-queries
 gem 'sprockets-media_query_combiner'

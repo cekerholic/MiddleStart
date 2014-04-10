@@ -7,34 +7,54 @@
 # No-layout
 page "sitemap.html", :layout => false
 
+
+
+###
 # Livereload Module
 activate :livereload, :apply_js_live => false, :apply_css_live => false
 
-# combine every sass @media-queries rules into one block
+
+
+###
+# Additional Plugins
+# Sass Media Query Combiner: combine every sass @media-queries rules into one block
 require 'sass-media_query_combiner'
 
-# Scut Sass Utilities
+# Scut: a collection of Sass utilities
 require 'scut'
 
-# Compass config
+
+
+###
+# Compass configuration
 compass_config do |compass|
-  compass.line_comments = false
+  compass.output_style = :expanded
 end
 
+
+
+###
 # Set Default Directory
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/img'
+
+
+
+###
+# Prevent HAML to indent or format the HTML output. This significantly improves rendering performance but makes viewing the source unpleasant.
+# If using Sublime Text, you can easily reindent the HTML output using this custom keybinding https://gist.github.com/cekerholic/8121537
 set :haml, { :attr_wrapper => "\"", :ugly => true }
 
+
+
+###
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
   compass_config do |compass|
     compass.line_comments = false
-    # compass.enable_sourcemaps = false 
-    # compass.sass_options = {:quiet => true, :sourcemap => false}
   end
   
   # Minify Javascript on build
