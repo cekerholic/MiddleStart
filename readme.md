@@ -14,10 +14,9 @@ MiddleKit is a front-end development starter kit for [Middleman static site gene
 ##How to Use?
 
 - `gem install middleman` if you haven't already
-- `gem install sprockets-media_query_combiner`
-- `gem install scut`
 - `git clone https://github.com/cekerholic/MiddleStart.git ~/.middleman`
 - `middleman init --template=middlestart`
+- `bundle install`
 - Make something awesome
 
 
