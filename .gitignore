@@ -16,3 +16,6 @@
 # Ignore .sublime-project
 /*.sublime-project
 /*.sublime-workspace
+
+# Ignore Bower components
+/bower_components
