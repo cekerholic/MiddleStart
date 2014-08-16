@@ -23,13 +23,19 @@
 }
 
 .sample-grid {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 
   [class*='col'] {
-    border: 1px solid $def-border;
-    background-color: $grey-lighter;
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+    div {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border: 1px solid $def-border;
+      background-color: $grey-lighter;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
   &.gradient-test {
     [class*='col'] {
