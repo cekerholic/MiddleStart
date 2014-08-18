@@ -13,7 +13,7 @@ MiddleKit is a front-end development starter kit for [Middleman static site gene
 ##How to Use?
 
 - Install Middleman `gem install middleman`
-- `git clone https://github.com/cekerholic/MiddleStart.git ~/.middleman`
+- `git clone https://github.com/cekerholic/MiddleStart.git ~/.middleman/middlestart`
 - `middleman init --template=middlestart`
 - `bundle install`
 - Make something awesome
