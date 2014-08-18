@@ -1,4 +1,11 @@
 ###
+# Site Settings
+
+set :site_title, 'MiddleStart'
+
+
+
+###
 # Page options, layouts, aliases and proxies
 
 # Alternative-layout
@@ -11,7 +18,7 @@ page "sitemap.html", :layout => false
 
 ###
 # Livereload Module
-activate :livereload, :apply_js_live => false, :apply_css_live => false
+activate :livereload
 
 
 
