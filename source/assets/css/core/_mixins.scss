@@ -51,24 +51,19 @@ $grad-value-def : 10%;
   @if not $radial {
     @if not $second-color {
       @if $value and not $to-light {
-        @include filter-gradient( $color, darken($color, $value) );
         @include background-image(linear-gradient( $color, darken($color, $value) ));
       }
       @if $value and $to-light {
-        @include filter-gradient( $color, lighten($color, $value) );
         @include background-image(linear-gradient( $color, lighten($color, $value) ));
       }
       @if not $value and $to-light {
-        @include filter-gradient( $color, lighten($color, $grad-value-def) );
         @include background-image(linear-gradient( $color, lighten($color, $grad-value-def) ));
       }
       @if not $value and not $to-light {
-        @include filter-gradient( $color, darken($color, $grad-value-def) );
         @include background-image(linear-gradient( $color, darken($color, $grad-value-def) ));
       }
     }
     @else {
-      @include filter-gradient( $color, $second-color );
       @include background-image(linear-gradient( $color, $second-color ));
     }
   }
