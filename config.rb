@@ -30,6 +30,9 @@ require 'sass-media_query_combiner'
 # Scut: a collection of Sass utilities
 require 'scut'
 
+# Autoprefixer
+activate :autoprefixer
+
 
 
 ###
