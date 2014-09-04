@@ -10,9 +10,9 @@
     display: table;
   }
   &:after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -46,15 +46,11 @@
 
 // Rounded Shape
 %rounded {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   border-radius: 6px;
 }
 
 // Circle Shape
 %circle {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
 }
 
