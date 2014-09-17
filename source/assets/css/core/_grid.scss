@@ -6,7 +6,7 @@
 // --------------------------------------------
 
 %float-xs {
-  @include respond(phone) {
+  @include respond(phone-narrow) {
     float: left;
   }
 }
@@ -78,12 +78,12 @@ $gutter-width : $default-gutter-width/2;
   .col-xs-#{$i} {
     @extend %float-xs;
 
-    @include respond(phone) {
+    @include respond(phone-narrow) {
       width: ($i/$default-column-number)*100%;
     }
   }
   .offset-xs-#{$i} {
-    @include respond(phone) {
+    @include respond(phone-narrow) {
       margin-left: ($i/$default-column-number)*100%;
     }
   }
