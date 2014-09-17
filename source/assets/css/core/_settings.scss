@@ -69,10 +69,6 @@ $default-gutter-width:     30px !default;
 // @media-queries breakpoint
 // --------------------------------------------
 
-// for iMac, HDTV and other screen that larger than common PC/laptop screen viewport
-// @media-queries type: min-width
-$screen-wide:           1441px !default;
-
 // for PC/laptop screen viewport
 // @media-queries type: min-width
 $screen-standard:       1230px !default;

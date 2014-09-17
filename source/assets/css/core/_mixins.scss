@@ -158,9 +158,6 @@ $grad-value-def : 10%;
 // --------------------------------------------
 
 @mixin respond($media: true, $query-width-min: false, $query-width-max: false) {
-  @if $media == wide {
-    @media (min-width: $screen-wide) { @content; }
-  }
   @if $media == standard {
     @media (min-width: $screen-standard) { @content; }
   }
