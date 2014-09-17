@@ -24,7 +24,7 @@
 // --------------------------------------------
 
 // better cross-browser consistency in the default styling of HTML elements
-@import "core/normalize";
+@import "../../../bower_components/normalize-css/normalize.css";
 
 // Default MiddleKit variables
 @import "core/settings"; 
